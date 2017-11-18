@@ -1,0 +1,54 @@
+#signup{
+  background-color: 	#9932CC;
+  font-size: 30px;
+  text-decoration-color: chocolate;
+  text-shadow:2px 2px #d3d3d3;
+  padding: inherit;
+  border-radius: 12%;
+  border: 1px solid blue;
+}
+#si{
+  background-color: 	#3c5c7c;
+  font-size: 30px;
+  text-decoration-color: chocolate;
+  text-shadow:2px 2px #d3d3d3;
+  padding: inherit;
+  border-radius: 12%;
+  border: 1px solid blue;
+}
+#cse{
+    background-color: 	#0bb8ff;
+  font-size: 30px;
+  text-decoration-color: chocolate;
+  
+  padding: inherit;
+  -moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+	border-radius: 50px;
+    
+}
+#it{
+    background-color: 	#FF6347;
+  font-size: 30px;
+  text-decoration-color: 	#FFD700;
+  
+  padding: inherit;
+  -moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+	border-radius: 50px;
+    
+}
+#demo{
+    background-color: 	#FF6347;
+  
+  -moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+	border-radius: 50px;
+	
+}
+#sii{
+	 height :300px;
+	 width :300px;
+	 border : 1px solid green;
+     background-color : #556677;	 
+}

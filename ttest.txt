@@ -1,0 +1,161 @@
+<?php
+  /*  error_reporting(0);
+
+    require_once ('../../admin/config/ajax_config.php');
+    require_once ('../../admin/config/ajax_server.php');
+	
+	*/
+		//$id = $_POST['id'];
+  
+     $v=$_POST['id'];
+     
+      if(isset($_POST['user_image1'])){
+		
+		$imgFile1 = $_FILES['user_image1']['name'];
+		$tmp_dir1 = $_FILES['user_image1']['tmp_name'];
+		$imgSize1 = $_FILES['user_image1']['size'];
+      }
+     if(isset($_POST['user_image2'])){
+		$imgFile2 = $_FILES['user_image2']['name'];
+		$tmp_dir2 = $_FILES['user_image2']['tmp_name'];
+		$imgSize2 = $_FILES['user_image2']['size'];
+     }
+     if(isset($_POST['user_image3'])){
+		$imgFile3 = $_FILES['user_image3']['name'];
+		$tmp_dir3 = $_FILES['user_image3']['tmp_name'];
+		$imgSize3 = $_FILES['user_image3']['size'];
+     }
+     if(isset($_POST['user_image4'])){
+		$imgFile4 = $_FILES['user_image4']['name'];
+		$tmp_dir4 = $_FILES['user_image4']['tmp_name'];
+		$imgSize4 = $_FILES['user_image4']['size'];
+     }
+		
+		
+		  if(isset($_POST['user_image1'])){
+		
+			$upload_dir1 = 'ban1/'; // upload directory
+	
+			$imgExt1 = strtolower(pathinfo($imgFile1,PATHINFO_EXTENSION)); // get image extension
+		
+			// valid image extensions
+			$valid_extensions1 = array('jpeg', 'jpg', 'png', 'gif'); // valid extensions
+		
+			// rename uploading image
+			$userpic1 = rand(1000,1000000).".".$imgExt1;
+				
+			// allow valid image file formats
+			if(in_array($imgExt1, $valid_extensions1)){			
+				// Check file size '5MB'
+				if($imgSize1 < 5000000)				{
+					move_uploaded_file($tmp_dir1,$upload_dir1.$userpic1);
+				}
+				else{
+					$errMSG = "Sorry, your file is too large.";
+				}
+			}
+			else{
+				$errMSG = "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";		
+			}
+			
+          }
+          if(isset($_POST['user_image2'])){
+			$upload_dir2 = 'ban2/'; // upload directory
+	
+			$imgExt2 = strtolower(pathinfo($imgFile2,PATHINFO_EXTENSION)); // get image extension
+		
+			// valid image extensions
+			$valid_extensions2 = array('jpeg', 'jpg', 'png', 'gif'); // valid extensions
+		
+			// rename uploading image
+			$userpic2 = rand(1000,1000000).".".$imgExt2;
+				
+			// allow valid image file formats
+			if(in_array($imgExt2, $valid_extensions2)){			
+				// Check file size '5MB'
+				if($imgSize2 < 5000000)				{
+					move_uploaded_file($tmp_dir2,$upload_dir2.$userpic2);
+				}
+				else{
+					$errMSG = "Sorry, your file is too large.";
+				}
+			}
+			else{
+				$errMSG = "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";		
+			}
+          }
+           if(isset($_POST['user_image3'])){
+			$upload_dir3 = 'ban3/'; // upload directory
+	
+			$imgExt3 = strtolower(pathinfo($imgFile3,PATHINFO_EXTENSION)); // get image extension
+		
+			// valid image extensions
+			$valid_extensions3 = array('jpeg', 'jpg', 'png', 'gif'); // valid extensions
+		
+			// rename uploading image
+			$userpic3 = rand(1000,1000000).".".$imgExt3;
+				
+			// allow valid image file formats
+			if(in_array($imgExt3, $valid_extensions3)){			
+				// Check file size '5MB'
+				if($imgSize3 < 5000000)				{
+					move_uploaded_file($tmp_dir3,$upload_dir3.$userpic3);
+				}
+				else{
+					$errMSG = "Sorry, your file is too large.";
+				}
+			}
+			else{
+				$errMSG = "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";		
+			}
+           }
+            if(isset($_POST['user_image4'])){
+			$upload_dir4 = 'ban4/'; // upload directory
+	
+			$imgExt4 = strtolower(pathinfo($imgFile4,PATHINFO_EXTENSION)); // get image extension
+		
+			// valid image extensions
+			$valid_extensions4 = array('jpeg', 'jpg', 'png', 'gif'); // valid extensions
+		
+			// rename uploading image
+			$userpic4 = rand(1000,1000000).".".$imgExt4;
+				
+			// allow valid image file formats
+			if(in_array($imgExt4, $valid_extensions4)){			
+				// Check file size '5MB'
+				if($imgSize4 < 5000000)				{
+					move_uploaded_file($tmp_dir4,$upload_dir4.$userpic4);
+				}
+				else{
+					$errMSG = "Sorry, your file is too large.";
+				}
+			}
+			else{
+				$errMSG = "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";		
+			}
+            }
+  
+		
+		// if no error occured, continue ....
+		/*if(!isset($errMSG))
+		{
+			$stmt = $DB_con->prepare('INSERT INTO market_run(id,user_name,password,Ad,userPic) VALUES(:id,:uname, :password,:Ad, :upic)');
+			$stmt->bindParam(':id',$id);
+			$stmt->bindParam(':uname',$user_name);
+			$stmt->bindParam(':password',$password);
+			$stmt->bindParam(':Ad',$Ad);
+			$stmt->bindParam(':upic',$userpic);
+			
+			if($stmt->execute())
+			{
+				$successMSG = "new record succesfully inserted ...";
+				header("refresh:2;login.php"); // redirects image view page after 5 seconds.
+			}
+			else
+			{
+				$errMSG = "error while inserting....";
+			}
+		}
+	}
+*/
+?>
